@@ -11,6 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <title> WeatherApp</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
       * {
@@ -108,10 +109,10 @@
         /* font-size: 800%; */
         height: 50%;
         display: flex;
-        margin-top: 30%;
+        margin-top: 10%;
         justify-content: center;
         align-items: center;
-        font-size: 2em;
+        font-size: 5em;
       }
       .fa-cloud {
         height: 50%;
@@ -119,7 +120,7 @@
         margin-top: 10%;
         justify-content: center;
         align-items: center;
-        font-size: 1.5em;
+        font-size: 5em;
       }
       .fa-cloud-rain {
         height: 50%;
@@ -127,7 +128,7 @@
         margin-top: 10%;
         justify-content: center;
         align-items: center;
-        font-size: 1.5em;
+        font-size: 5em;
       }
 
       @keyframes wave-one {
@@ -235,12 +236,13 @@
           "<i class='fa-solid fa-sun fa-spin' style='color: #ffd500'></i>";
       } else if (tempStatus == "Clouds") {
         weathercon.innerHTML =
-          "<i class='fa-solid fa-cloud fa-beat' style='color: #ffffff;'></i>";
+          // "<i class='fa-solid fa-cloud fa-beat' style='color: #ffffff;'></i>";
+          "<i class='fa-solid fa-sun fa-spin' style='color: #ffd500'></i>";
       } else if (tempStatus == "Rainy") {
         weathercon.innerHTML =
           "<i class='fa-solid fa-cloud-rain' style='color: #ffffff'></i>";
       } else {
-        //  weathercon.innerHTML="<i class='fa-solid fa-clouds' style='color: #ffffff'></i>";
+         weathercon.innerHTML="<i class='fa-solid fa-clouds' style='color: #ffffff'></i>";
       }
       console.log(document);
       const getCurrentDate = () => {
